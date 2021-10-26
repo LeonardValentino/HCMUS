@@ -278,3 +278,28 @@ int bai10()
     cout << "\nKet qua bai 3 la: " << ket_qua_bai_3;
     return 0;
 }
+// bai nop
+int bai10()
+{
+    unsigned int n;
+    float ket_qua_cau_1 = 0,ket_qua_cau_2 = 0, ket_qua_cau_3 = 0;
+    printf("Nhap so nguyen duong n: ");
+    scanf("%d", &n);
+    for(int i = 2; i <= n; i++)
+    {
+        ket_qua_cau_1 += (float)(i - 1)/ i;
+    }
+    for(int i = 1; i <= n; i++)
+    {
+        ket_qua_cau_2 += i * (i + 1);
+    }
+    for(int i = 1; i <= n; i++)
+    {
+        ket_qua_cau_3 += pow(i,i);
+    }
+
+    printf("Ket qua cau 1 la: %f",ket_qua_cau_1);
+    printf("\nKet qua cau 2 la: %f",ket_qua_cau_2);
+    printf("\nKet qua cau 3 la: %f",ket_qua_cau_3);
+    return 0;
+}
