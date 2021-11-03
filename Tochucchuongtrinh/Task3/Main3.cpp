@@ -6,11 +6,11 @@ int main()
 {
     unsigned int n; // kiem tra truong hop am
     printf("Nhap so nguyen duong: ");
-    scanf("%d", &n);
+    scanf("%u", &n);
     int songuyento = kiemtra_doixung(n);
     if(songuyento == 1)
-        printf("%d la so doi xung.",n);
+        printf("%u la so doi xung.",n);
     else
-        printf("%d khong la so doi xung.",n);
+        printf("%u khong la so doi xung.",n);
     return 1;
 }
