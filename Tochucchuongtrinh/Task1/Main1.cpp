@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include "kiemtra.h"
 int main()
 {
     int n;
