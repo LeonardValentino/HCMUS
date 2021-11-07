@@ -3,7 +3,7 @@
 
 float bieu_thuc_1(int n);
 int bieu_thuc_2(int n);
-long bieu_thuc_3(int n);
+double bieu_thuc_3(int n);
 int main()
 {
     unsigned int n;
@@ -11,10 +11,10 @@ int main()
     scanf("%u", &n);
     float tong_cau_1 = bieu_thuc_1(n);
     int tong_cau_2 = bieu_thuc_2(n);
-    long tong_cau_3 = bieu_thuc_3(n);
+    double tong_cau_3 = bieu_thuc_3(n);
     printf("Ket qua bieu thuc thu 1 la: %f", tong_cau_1);
     printf("\nKet qua bieu thuc 2 la: %d", tong_cau_2);
-    printf("\nKet qua bieu thuc 3: %li", tong_cau_3);
+    printf("\nKet qua bieu thuc 3: %lf", tong_cau_3);
     return 0;
 }
 
@@ -38,9 +38,9 @@ int bieu_thuc_2(int n)
     return tong;
 }
 
-long bieu_thuc_3(int n)
+double bieu_thuc_3(int n)
 {
-    long tong = 0;
+    double tong = 0;
     for(int i = 0; i <= n; i++)
     {
         tong += pow(i,i);
