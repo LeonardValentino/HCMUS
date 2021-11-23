@@ -66,5 +66,5 @@ int main()
     xuatMaTran(a,dong,cot);
     printf("Cac dong co chua gia tri am trong ma tran la: ");
     xuatDongCoSoAm(a,dong,cot);
-    return 0;
+    return 0;   // xem lai xem nen xuat chi so hay so dong
 }
