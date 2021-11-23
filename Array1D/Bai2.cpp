@@ -13,7 +13,7 @@ void decToBinary(int n)
         i++;
     }
 
-    for(int h = i - 1; h >= 0; h--)
+    for(int h = i; h >= 0; h--)
         printf("%d",soNhiPhan[h]);
 }
 
