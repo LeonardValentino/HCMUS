@@ -84,7 +84,7 @@ int demSoNguyenToPhanBiet(int a[], int n)
     int dem = 0;
     for(int i = 0; i < n; i++)
     {
-        if(kiemTraNguyenTo(n) == true && kiemTraTrung(a,n,i) == true) 
+        if(kiemTraNguyenTo(a[i]) == true && kiemTraTrung(a,n,i) == true) 
             dem++;
     }
     return dem;
