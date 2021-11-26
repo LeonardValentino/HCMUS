@@ -11,17 +11,6 @@ void nhapMang(int a[], int &n)
             printf("Mang co toi da 25 pha tu. Xin nhap lai.\n");
     } while (n < 1 || n > 25);
 
-    for(int i = 0; i < n; i++)
-    {
-        do
-        {
-            printf("Nhap phan tu thu %d: ", i + 1);
-            scanf_s("%d", &a[i]);
-            if(abs(a[i]) > 10000)
-                printf("|a[i]| co gia tri tuyet doi nho hon 10000. Xin nhap lai.\n");
-        } while (abs(a[i]) > 10000);
-        
-    }
 }
 
 void xuatMang(int a[], int n)
