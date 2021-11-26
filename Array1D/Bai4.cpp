@@ -54,9 +54,9 @@ void sapXepMang(int a[], int n, int X)
         a[i] = b[i];
     }
 
-    for(int i = 0; i <= end ; i++)
+    for(int i = 0; i < end ; i++)
     {
-        for(int j = i + 1; j <= end + 1; j++)
+        for(int j = i + 1; j <= end; j++)
         {
             if(a[i] > a[j])
                 hoanVi(a[i],a[j]);
