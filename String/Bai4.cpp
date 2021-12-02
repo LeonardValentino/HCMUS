@@ -6,7 +6,9 @@ void xuatChuoi(char str[])
 {
     for(int i = 0; i < strlen(str); i++)
     {
-        printf("%c\n", str[i]);
+        printf("%c", str[i]);
+        if(str[i] == ' ')
+            printf("\n");
     }
 }
 
