@@ -43,32 +43,38 @@ void xuatMaTran(int a[][100], int dong, int cot)
     }
 }
 
-int demSoLanXuatHien(int a[][100], int dong, int cot, int n)
+void demChuSo(int a[][100], int b[],int dong, int cot)
 {
-    int dem = 1;
     for(int i = 0; i < dong; i++)
     {
-        for(int j  = 0; j < cot; j++)
+        for(int j = 0; j < cot; j++)
         {
-            if(a[i][j] == n)
-                dem++;
+            int temp = a[i][j];
+            while(temp != 0)
+            {
+                int num = temp % 10;
+                b[num]++;
+                temp /= 10;
+            }
         }
     }
-    return dem;
 }
 
-int phanTuXuatHienNhieuNhat(int a[][100], int dong, int cot)
+void xuatChuSoXuatHienNhieuNhat(int a[][100], int dong, int cot)
 {
-    int maxCount = demSoLanXuatHien(a, dong,cot, a[0][0]);
-    for(int i = 0; i < dong; i++)
+    int b[10] = {0};
+    demChuSo(a,b,dong,cot);
+    int MAX = b[0];
+    for(int i = 1; i < 10; i++)
     {
-        for(int j  = 0; j < cot; j++)
-        {
-            if(demSoLanXuatHien(a,dong,cot,a[i][j]) > maxCount)
-                maxCount = a[i][j];
-        }
+        if(b[i] > MAX)
+            MAX = b[i];
     }
-    return maxCount;
+    for(int i = 0; i < 10; i++)
+    {
+        if(b[i] == MAX)
+            printf("%d  ", i);
+    }
 }
 
 int main()
@@ -78,5 +84,6 @@ int main()
     nhapMaTran(a,dong,cot);
     printf("Ma tran vua nhap la: \n");
     xuatMaTran(a,dong,cot);
-    printf("Phan tu xuat hien nhieu nhat trong ma tran la: %d", phanTuXuatHienNhieuNhat(a,dong,cot));
+    printf("Chu so xuat hien nhieu nhat trong ma tran la: "); xuatChuSoXuatHienNhieuNhat(a,dong,cot);
+    return 0;
 }
