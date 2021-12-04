@@ -15,7 +15,7 @@ void xoaKyTuDacBiet(char str[])
     {
         if((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
         {
-            printf("Ki tu %d hop le.",i);
+
         }
         else
         {
@@ -27,10 +27,6 @@ void xoaKyTuDacBiet(char str[])
             {
                 xoaKiTu(str,i);
                 i--;
-            }
-            else
-            {
-                i++;
             }
             printf("Chuoi sau khi ban nhap lua chon: ");
             puts(str);
