@@ -15,7 +15,7 @@ void xoaKhoangTrang(char str[])
     for(int i = 0; i < strlen(str); i++)
     {
         if(str[i] == ' ' && str[i + 1] == ' ')
-            xoaKyTu(str,i);
+            xoaKyTu(str,i + 1);
     }
 }
 
