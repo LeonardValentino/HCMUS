@@ -82,6 +82,31 @@ void xuatTenHocSinh(HS a[], int n)
     }
 }
 
+float tinhDiemTrungBinh(HS a)
+{
+    return (a.diemToan + a.diemHoa + a.diemLy) / 3;
+}
+
+void xepHangHocSinh(HS a[], int n)
+{
+    for(int i = 0; i < n - 1; i++)
+    {
+        for(int j = i + 1; j < n; j++)
+        {
+            if(tinhDiemTrungBinh(a[i]) < tinhDiemTrungBinh(a[j]));
+                hoanVi(a[i], a[j]);
+        }
+    }
+}
+
+void xuatHocSinhDatHocBong(HS a[], int n)
+{
+    for(int i = 0; i < 3; i++)
+    {
+        printf("\n%d. Hoc sinh: ",i + 1); puts(a[i].hoTen);
+    }
+}
+
 int main()
 {
     int N;
@@ -90,5 +115,8 @@ int main()
     sapXepHocSinh(a,N);
     printf("\nDanh sach hoc sinh duoc sap xep tang dan theo diem toan: ");
     xuatTenHocSinh(a,N);
+    xepHangHocSinh(a,N);
+    printf("\nDanh sach hoc sinh nhan hoc bong: \n");
+    xuatHocSinhDatHocBong(a,N);
     return 0;
 }
